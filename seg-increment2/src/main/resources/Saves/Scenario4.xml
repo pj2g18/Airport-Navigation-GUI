@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Airports>
+    <Airport Name="Scenario 4" RESA="240" StripEnd="60">
+        <Runways>
+            <Runway Name=" 27R 09L">
+                <LogicalRunways>
+                    <LogicalRunway ASDA="3902" Clearway="0" DisplacedThreshold="306" Heading="09" LDA="3595" Letter="L" Stopway="0" TODA="3902" TORA="3902"/>
+                    <LogicalRunway ASDA="3884" Clearway="78" DisplacedThreshold="0" Heading="27" LDA="3884" Letter="R" Stopway="0" TODA="3962" TORA="3884"/>
+                </LogicalRunways>
+                <Obstacle BlastProtection="0" Height="20" DistanceFromCentre="0" ObstaclePosition="{09L=3546, 27R=50}"/>
+            </Runway>
+        </Runways>
+    </Airport>
+</Airports>

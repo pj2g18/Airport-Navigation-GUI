@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane style="-fx-background-color: #91e4fb;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.InsertValuesController">
+    <children>
+        <BorderPane layoutX="7.0" layoutY="7.0" prefHeight="416.0" prefWidth="644.0">
+         <center>
+                  <HBox style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                      <opaqueInsets>
+                          <Insets />
+                      </opaqueInsets>
+                      <BorderPane.margin>
+                          <Insets bottom="15.0" left="50.0" right="50.0" />
+                      </BorderPane.margin>
+                      <children>
+                          <GridPane fx:id="logicalInputsOne">
+                              <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                              <children>
+                                  <Label text="Heading" underline="true">
+                                      <GridPane.margin>
+                                          <Insets left="15.0" />
+                                      </GridPane.margin>
+                                  </Label>
+                                  <TextField fx:id="designationLeft" alignment="CENTER" maxWidth="-Infinity" prefWidth="75.0" GridPane.rowIndex="1">
+                                      <GridPane.margin>
+                                          <Insets left="15.0" />
+                                      </GridPane.margin>
+                           <tooltip>
+                              <Tooltip text="A 2 digit number, based on the degree of the runways heading directon from 01 to 36.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                                  </TextField>
+                                  <Label text="Current Available Runway" underline="true" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                      <padding>
+                                          <Insets left="15.0" />
+                                      </padding>
+                                  </Label>
+                                  <Label text="TORA" GridPane.rowIndex="3">
+                                      <GridPane.margin>
+                                          <Insets left="15.0" />
+                                      </GridPane.margin>
+                                  </Label>
+                                  <Label text="TODA" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                      <GridPane.margin>
+                                          <Insets left="15.0" />
+                                      </GridPane.margin>
+                        </Label>
+                                  <Label text="ASDA" GridPane.rowIndex="4">
+                                      <GridPane.margin>
+                                          <Insets left="15.0" />
+                                      </GridPane.margin>
+                                  </Label>
+                                  <Label text="LDA" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                      <GridPane.margin>
+                                          <Insets left="15.0" />
+                                      </GridPane.margin>
+                        </Label>
+                                  <Label text="Clearway" GridPane.rowIndex="6">
+                                      <GridPane.margin>
+                                          <Insets bottom="15.0" left="15.0" />
+                                      </GridPane.margin>
+                                  </Label>
+                                  <Label text="Stopway" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                      <GridPane.margin>
+                                          <Insets bottom="15.0" left="15.0" />
+                                      </GridPane.margin>
+                        </Label>
+                                  <Label text="D. Threshold" GridPane.rowIndex="7">
+                                      <GridPane.margin>
+                                          <Insets bottom="15.0" left="15.0" />
+                                      </GridPane.margin>
+                                      <opaqueInsets>
+                                          <Insets />
+                                      </opaqueInsets>
+                                  </Label>
+                                  <TextField fx:id="toraLeft" onKeyReleased="#logAutofill" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                      <GridPane.margin>
+                                          <Insets />
+                                      </GridPane.margin>
+                           <tooltip>
+                              <Tooltip text="Take-Off Run Available: Total distance from the point where an aircraft can commence its takeoff to the point whre the runway can no longer support the weight of the aircraft.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Tooltip>
+                           </tooltip>
+                        </TextField>
+                                  <TextField fx:id="asdaLeft" onKeyReleased="#logFeaturesAutofill" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <tooltip>
+                              <Tooltip text="Accelerate-Stop Distance Available: The length of the TORA plus any Stopway.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Tooltip>
+                           </tooltip></TextField>
+                                  <TextField fx:id="todaLeft" onKeyReleased="#logFeaturesAutofill" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <tooltip>
+                              <Tooltip text="Take-Off Distance Available: The length of the TORA plus any Clearway.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Tooltip>
+                           </tooltip></TextField>
+                                  <TextField fx:id="ldaLeft" onKeyReleased="#logFeaturesAutofill" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <tooltip>
+                              <Tooltip text="Landing Distance Avilable: The length of the runway available for landing.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Tooltip>
+                           </tooltip></TextField>
+                                  <TextField fx:id="clearwayLeft" onKeyReleased="#logDistancesAutofill" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                      <GridPane.margin>
+                                          <Insets bottom="15.0" />
+                                      </GridPane.margin>
+                           <tooltip>
+                              <Tooltip text="An area beyond the TORA used during an aircraft's initial climb to a specifed height.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Tooltip>
+                           </tooltip>
+                        </TextField>
+                                  <TextField fx:id="displacedLeft" onKeyReleased="#logDistancesAutofill" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                      <GridPane.margin>
+                                          <Insets bottom="15.0" />
+                                      </GridPane.margin>
+                           <tooltip>
+                              <Tooltip text="A runway threshold located at a point other than the physical beginning or end of the runway. The displaced portion can be used for take-off but not landing.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                        </TextField>
+                                  <TextField fx:id="stopwayLeft" onKeyReleased="#logDistancesAutofill" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                      <GridPane.margin>
+                                          <Insets bottom="15.0" />
+                                      </GridPane.margin>
+                           <tooltip>
+                              <Tooltip text="An area beyond the TORA used in the case of an abandoned take-off.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Tooltip>
+                           </tooltip>
+                        </TextField>
+                                  <Label text="Runway Details" underline="true" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                                      <GridPane.margin>
+                                          <Insets left="15.0" />
+                                      </GridPane.margin>
+                                  </Label>
+                                  <TextField fx:id="letter" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <tooltip>
+                              <Tooltip text="Used to identify the position of a runway within an airport. L, R, C or blank.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                        </TextField>
+                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Letter" underline="true" GridPane.columnIndex="1" />
+                              </children>
+                          </GridPane>
+                  <VBox prefHeight="361.0" prefWidth="153.0">
+                     <children>
+                                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#configureParameters" prefHeight="25.0" prefWidth="125.0" text="Apply" />
+                        <Pane prefHeight="50.0" prefWidth="120.0" />
+                        <Button fx:id="logicalRunwayInverse" mnemonicParsing="false" onAction="#logicalRunwayInverseClick" text="Add Inverse of" />
+                     </children>
+                  </VBox>
+                      </children>
+                  </HBox>
+         </center>
+         <top>
+                  <Label text="Configure Logical Runway" BorderPane.alignment="CENTER">
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" />
+               </BorderPane.margin>
+                  </Label>
+         </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

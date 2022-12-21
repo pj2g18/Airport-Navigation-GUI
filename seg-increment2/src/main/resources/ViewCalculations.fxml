@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #91e4fb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <Pane prefHeight="768.0" prefWidth="1200.0">
+         <children>
+            <BorderPane layoutX="20.0" layoutY="114.0" prefHeight="429.0" prefWidth="1163.0">
+               <center>
+                  <StackPane fx:id="stack" prefHeight="427.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane fx:id="viewSide" maxWidth="-Infinity" prefHeight="427.0" prefWidth="1100.0" style="-fx-background-color: #1919B9;" visible="false">
+                           <children>
+                              <Line fx:id="sideSlopeLine" endX="238.5" endY="227.0" fill="BLACK" startX="238.5" startY="127.0" strokeWidth="3.0" style="-fx-stroke-dash-array: 10;" />
+                              <Rectangle fx:id="sideSlopeBlockerFour" arcHeight="5.0" arcWidth="5.0" fill="#91e4fb" height="427.0" layoutX="1100.0" stroke="#91e4fb" strokeType="INSIDE" width="48.0" />
+                              <Rectangle fx:id="sideSlopeBlockerOne" arcHeight="5.0" arcWidth="5.0" fill="#91e4fb" height="427.0" layoutX="-50.0" stroke="#91e4fb" strokeType="INSIDE" width="50.0" />
+                              <Rectangle fx:id="sideSlopeBlockerThree" arcHeight="5.0" arcWidth="5.0" fill="#1919b9" height="427.0" layoutX="975.0" stroke="#1919b9" strokeType="INSIDE" width="125.0" />
+                              <Rectangle fx:id="sideSlopeBlockerTwo" arcHeight="5.0" arcWidth="5.0" fill="#1919b9" height="427.0" stroke="#1919b9" strokeType="INSIDE" width="125.0" />
+                              <Rectangle fx:id="sideRunway" arcHeight="5.0" arcWidth="5.0" fill="#97a7b5" height="26.0" layoutX="238.5" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="618.0" />
+                              <Rectangle fx:id="sideClearway" arcHeight="5.0" arcWidth="5.0" fill="#165082" height="30.0" layoutX="856.5" layoutY="225.0" stroke="WHITE" strokeType="INSIDE" style="-fx-stroke-dash-array: 5;" />
+                              <Rectangle fx:id="sideStopway" arcHeight="5.0" arcWidth="5.0" fill="#717b84" height="26.0" layoutX="856.5" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Line fx:id="sideDisplacedThreshold" endX="238.5" endY="253.0" startX="238.5" startY="227.0" strokeWidth="3.0" />
+                              <Text fx:id="sideName" fill="WHITE" layoutX="246.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Ref">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Rectangle fx:id="sideArrowBar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="11.0" layoutX="495.0" layoutY="53.0" stroke="WHITE" strokeType="INSIDE" width="108.0" />
+                              <Polygon fx:id="sideArrowHead" fill="WHITE" layoutX="541.0" layoutY="145.0" points="137.33331298828125, -65.44444274902344, 137.33331298828125, -108.5555648803711, 61.888885498046875, -84.1111068725586" rotate="180.0" stroke="WHITE" strokeType="INSIDE" />
+                              <Line fx:id="sideTORAExtraLineOne" endX="238.5" endY="316.5" startX="238.5" startY="316.5" stroke="RED" strokeWidth="3.0" />
+                              <Line fx:id="sideTORAExtraLineTwo" endX="238.5" endY="316.5" startX="238.5" startY="316.5" stroke="LIME" strokeWidth="3.0" />
+                              <Line fx:id="sideLDAExtraLineOne" endX="238.5" endY="277.5" startX="238.5" startY="277.5" stroke="RED" strokeWidth="3.0" />
+                              <Line fx:id="sideLDAExtraLineTwo" endX="238.5" endY="277.5" startX="238.5" startY="277.5" stroke="LIME" strokeWidth="3.0" />
+                              <Line fx:id="sideLDALine" endX="856.5" endY="277.5" startX="238.5" startY="277.5" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideASDALine" endX="856.5" endY="355.5" startX="238.5" startY="355.5" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTODALine" endX="856.5" endY="394.5" startX="238.5" startY="394.5" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTORALine" endX="856.5" endY="316.5" startX="238.5" startY="316.5" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideLDAStart" endX="238.5" endY="292.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideLDAEnd" endX="238.5" endY="292.0" layoutX="618.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTORAStart" endX="238.5" endY="292.0" layoutY="39.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTORAEnd" endX="238.5" endY="292.0" layoutX="618.0" layoutY="39.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideASDAStart" endX="238.5" endY="292.0" layoutY="78.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideASDAEnd" endX="238.5" endY="292.0" layoutX="618.0" layoutY="78.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTODAStart" endX="238.5" endY="292.0" layoutY="117.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTODAEnd" endX="238.5" endY="292.0" layoutX="618.0" layoutY="117.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideLDAExtraMarkOne" endX="238.5" endY="292.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideLDAExtraMarkTwo" endX="238.5" endY="292.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTORAExtraMarkOne" endX="238.5" endY="292.0" layoutY="39.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="sideTORAExtraMarkTwo" endX="238.5" endY="292.0" layoutY="39.0" startX="238.5" startY="263.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Text fx:id="sideASDAText" fill="WHITE" layoutX="191.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ASDA">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="sideTODAText" fill="WHITE" layoutX="191.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODA">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <RadioButton fx:id="sideLogicalOne" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#sideSwitch" selected="true" text="Runway 1" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="sideLogicals" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="sideLogicalTwo" layoutX="20.0" layoutY="60.0" mnemonicParsing="false" onAction="#sideSwitch" text="Runway 2" textFill="WHITE" toggleGroup="$sideLogicals" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <Rectangle fx:id="sideObstacle" arcHeight="5.0" arcWidth="5.0" stroke="WHITE" strokeType="INSIDE" width="21.0" x="228.0" y="227.0" />
+                              <Text fx:id="sideDirectionText" fill="WHITE" layoutX="502.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Direction">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="sideLandingDirection" fill="WHITE" layoutX="502.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Landing Direction">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="sideTakeDirection" fill="WHITE" layoutX="502.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Take-Off Direction">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Line fx:id="sideSlopeBase" endX="238.5" endY="227.0" fill="RED" startX="238.5" startY="227.0" stroke="RED" strokeWidth="3.0" />
+                              <Line fx:id="sideSlopeTop" endX="238.5" endY="127.0" fill="RED" startX="238.5" startY="127.0" stroke="RED" strokeWidth="3.0" />
+                              <Text fx:id="sideSlopeText" fill="WHITE" layoutX="220.5" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slope" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <HBox fx:id="sideLDALabelPane" alignment="TOP_RIGHT" layoutX="36.0" layoutY="269.5" prefWidth="200.0">
+                                 <children>
+                                    <Text fx:id="sideLDAExtraTextTwo" fill="LIME" strokeType="OUTSIDE" strokeWidth="0.0" text="Extra2" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="sideLDAExtraTextOne" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Extra1" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="sideLDAText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LDA">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="sideTORALabelPane" alignment="CENTER_RIGHT" layoutX="36.0" layoutY="307.5" prefWidth="200.0">
+                                 <children>
+                                    <Text fx:id="sideTORAExtraTextTwo" fill="LIME" strokeType="OUTSIDE" strokeWidth="0.0" text="Extra2">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="sideTORAExtraTextOne" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Extra1">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="sideTORAText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="TORA" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Rectangle fx:id="sideLDAExtraTooltipBoxOne" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="260.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle fx:id="sideLDAExtraTooltipBoxTwo" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="260.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle fx:id="sideLDATooltipBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="260.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle fx:id="sideTORAExtraTooltipBoxOne" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="300.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle fx:id="sideTORAExtraTooltipBoxTwo" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="300.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle fx:id="sideTORATooltipBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="300.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle fx:id="sideASDATooltipBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="338.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle fx:id="sideTODATooltipBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="238.5" layoutY="377.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Text fx:id="sideOutOfBounds" fill="WHITE" layoutX="467.5" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obstacle Out Of Bounds&#10;No Redeclaration Required" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="viewPane" focusTraversable="true" maxWidth="-Infinity" onMouseDragEntered="#drag" prefHeight="45.0" prefWidth="1100.0" style="-fx-background-color: #1919B9;">
+                           <children>
+                              <Rectangle fill="#881fff" height="93.0" layoutY="339.0" smooth="false" stroke="#811fff" strokeType="INSIDE" width="1100.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1919b9" height="35.0" layoutX="282.0" layoutY="339.0" stroke="#1919b9" strokeType="INSIDE" width="538.0" />
+                              <Polygon fill="#881fff" layoutX="333.0" layoutY="411.0" points="-25.0, -36.5, -50.79998779296875, -73.0, -66.79998779296875, -36.5" stroke="#881fff" strokeType="INSIDE" />
+                              <Polygon fill="#881fff" layoutX="824.0" layoutY="420.0" points="-28.0, -46.5, -3.0, -80.0, 18.0, -34.0" stroke="#881fff" strokeType="INSIDE" />
+                              <Rectangle fill="#881fff" height="89.0" layoutY="-1.0" smooth="false" stroke="#811fff" strokeType="INSIDE" width="1100.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1919b9" height="36.0" layoutX="282.0" layoutY="53.0" stroke="#1919b9" strokeType="INSIDE" width="538.0" />
+                              <Polygon fill="#881fff" layoutX="847.0" layoutY="124.0" points="-25.0, -36.5, -51.0, -72.0, -25.0, -72.0" stroke="#881fff" strokeType="INSIDE" />
+                              <Polygon fill="#881fff" layoutX="310.0" layoutY="133.0" points="-28.0, -46.5, -3.0, -80.0, -48.60003662109375, -91.80000305175781" stroke="#881fff" strokeType="INSIDE" />
+                              <Pane fx:id="landingDirectionLTR1" prefHeight="91.0" prefWidth="158.0" visible="false">
+                                 <children>
+                                    <Polygon fx:id="arrowRight11" fill="WHITE" layoutX="-16.0" layoutY="132.0" points="137.33331298828125, -65.44444274902344, 137.33331298828125, -108.5555648803711, 160.0, -86.0" stroke="WHITE" strokeType="INSIDE" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="17.0" layoutX="26.0" layoutY="37.0" stroke="WHITE" strokeType="INSIDE" width="107.0" />
+                                    <Text fx:id="leftRunwayDirection1" fill="WHITE" layoutX="20.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Runway Direction">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Rectangle fx:id="rightClearway" arcHeight="5.0" arcWidth="5.0" fill="#165082" height="137.0" layoutX="-43.0" layoutY="145.0" stroke="WHITE" strokeType="INSIDE" style="-fx-stroke-dash-array: 5;" translateX="83.5" width="200.0" />
+                              <Rectangle fx:id="rightStopway" arcHeight="5.0" arcWidth="5.0" fill="#717b84" height="78.0" layoutX="70.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" translateX="83.5" width="87.0" />
+                              <Rectangle fx:id="runwayRectangle" arcHeight="5.0" arcWidth="5.0" fill="#97a7b5" height="78.0" layoutX="155.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" translateX="83.5" width="619.0" />
+                              <Line fx:id="leftDisplacedThreshold" endX="238.87869262695312" endY="252.0" startX="238.87869262695312" startY="177.0" strokeWidth="3.0" />
+                              <Line fx:id="rightDisplacedThreshold" endX="855.5" endY="255.0" startX="855.5" startY="177.0" strokeWidth="3.0" />
+                              <Rectangle fx:id="leftClearway" arcHeight="5.0" arcWidth="5.0" fill="#164f84" height="137.0" layoutX="772.0" layoutY="145.0" stroke="WHITE" strokeType="INSIDE" style="-fx-stroke-dash-array: 5;" translateX="83.5" width="200.0" />
+                              <Rectangle fx:id="leftStopway" arcHeight="5.0" arcWidth="5.0" fill="#717b84" height="78.0" layoutX="772.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" translateX="83.5" width="87.0" />
+                              <Text fx:id="rightName" fill="WHITE" layoutX="698.0" layoutY="222.0" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="27L" translateX="83.5">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <VBox fx:id="rightChecks" layoutX="725.0" layoutY="177.0" prefHeight="79.0" prefWidth="34.0" translateX="83.5">
+                                 <children>
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="leftChecks" layoutX="164.0" layoutY="176.0" prefHeight="79.0" prefWidth="34.0" translateX="83.5">
+                                 <children>
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                    <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" opacity="0.0" stroke="WHITE" strokeLineCap="ROUND" width="30.0" />
+                                 </children>
+                              </VBox>
+                              <Text fx:id="rightClearwayText" fill="WHITE" layoutX="-34.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clearway" translateX="83.5" />
+                              <Text fx:id="leftClearwayText" fill="WHITE" layoutX="912.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clearway" translateX="83.5" />
+                              <Text fx:id="leftStopwayText" fill="WHITE" layoutX="804.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stopway" translateX="83.5" />
+                              <Text fx:id="rightStopwayText" fill="WHITE" layoutX="78.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stopway" translateX="83.5" />
+                              <Text fx:id="leftName" fill="WHITE" layoutX="198.0" layoutY="223.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="09R" translateX="83.5">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Line fx:id="runwayLine" endX="262.39996337890625" layoutX="438.0" layoutY="215.0" startX="-213.0" stroke="WHITE" strokeType="OUTSIDE" style="-fx-stroke-dash-array: 15;" translateX="83.5" />
+                              <Pane fx:id="landingDirectionLTR" layoutX="6.0" layoutY="352.0" prefHeight="72.0" prefWidth="165.0" visible="false">
+                                 <children>
+                                    <Polygon fx:id="arrowRight1" fill="WHITE" layoutX="-23.0" layoutY="88.0" points="137.33331298828125, -65.44444274902344, 137.33331298828125, -98.19998168945312, 149.00001525878906, -82.50003051757812" stroke="WHITE" strokeType="INSIDE" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="14.0" layoutX="14.0" layoutY="-2.0" stroke="WHITE" strokeType="INSIDE" width="107.0" />
+                                    <Text fx:id="leftRunwayDirection" fill="WHITE" layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Runway Direction">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="landingDirectionRTL" layoutX="35.0" layoutY="4.0" prefHeight="102.0" prefWidth="192.0" visible="false">
+                                 <children>
+                                    <Text fx:id="rightRunwayDirection" fill="WHITE" layoutX="-2.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Runway Direction" wrappingWidth="124.720458984375">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="9.0" layoutX="7.0" layoutY="10.0" stroke="WHITE" strokeType="INSIDE" width="106.0" />
+                                    <Polygon fx:id="arrowRight11" fill="WHITE" layoutX="-123.0" layoutY="104.0" points="137.333251953125, -79.1865234375, 137.333251953125, -100.0, 123.0, -88.0" stroke="WHITE" strokeType="INSIDE" />
+                                 </children>
+                              </Pane>
+                              <Rectangle fx:id="object" arcHeight="5.0" arcWidth="5.0" height="21.0" stroke="BLACK" strokeType="INSIDE" width="21.0" x="230.0" y="204.0" />
+                              <Line fx:id="rightTodaLine" endX="850.0" endY="121.0" startX="44.878692626953125" startY="121.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightToraLine" endX="851.0" endY="24.0" startX="239.3" startY="24.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightLdaLine" endX="852.0" endY="59.0" startX="239.39971923828125" startY="59.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightAsdaLine" endX="850.0" endY="88.0" startX="151.39971923828125" startY="88.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftTodaLine" endX="1054.0" endY="396.0" startX="245.0" startY="396.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftToraLine" endX="857.0858154296875" endY="299.47369384765625" startX="243.5" startY="299.47369384765625" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftLdaLine" endX="859.5" endY="331.0010986328125" startX="243.303466796875" startY="331.0010986328125" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftAsdaLine" endX="942.0" endY="362.0" startX="244.0" startY="362.0" stroke="WHITE" strokeWidth="3.0" />
+                              <HBox fx:id="leftToraTextBox" alignment="TOP_RIGHT" layoutX="33.0" layoutY="292.0" prefHeight="19.0" prefWidth="204.0" visible="false">
+                                 <children>
+                                    <Text fx:id="leftToraExtra2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" textAlignment="JUSTIFY" wrappingWidth="77.60001182556152" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="leftToraExtra1" fill="LIME" strokeType="OUTSIDE" strokeWidth="0.0" text="SLOPE" textAlignment="JUSTIFY" wrappingWidth="54.79063415527344" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="leftToraText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" textAlignment="JUSTIFY" wrappingWidth="81.50256538391113" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="leftLdaTextBox" alignment="TOP_RIGHT" layoutX="35.0" layoutY="320.0" prefHeight="19.0" prefWidth="194.0" visible="false">
+                                 <children>
+                                    <Text fx:id="leftLdaExtra2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" textAlignment="JUSTIFY" wrappingWidth="77.00000381469727">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="leftLdaExtra1" fill="LIME" strokeType="OUTSIDE" strokeWidth="0.0" text="SLOPE" textAlignment="JUSTIFY" wrappingWidth="48.9906040430069">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="leftLdaText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Text fx:id="leftAsdaText" fill="WHITE" layoutX="176.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ASDA">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="leftTodaText" fill="WHITE" layoutX="175.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODA">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="rightAsdaText" fill="WHITE" layoutX="887.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ASDA">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="rightTodaText" fill="WHITE" layoutX="886.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODA">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Line fx:id="leftToraGreenLine" endX="242.0" endY="299.47369384765625" startX="242.0" startY="299.47369384765625" stroke="LIME" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="leftToraRedLine" endX="242.0" endY="299.47369384765625" startX="242.0" startY="299.47369384765625" stroke="RED" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="leftLdaGreenLine" endX="242.0" endY="331.0010986328125" startX="242.0" startY="331.0010986328125" stroke="LIME" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="leftLdaRedLine" endX="242.0" endY="331.0010986328125" startX="242.0" startY="331.0010986328125" stroke="RED" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightLdaGreenLine" endX="853.0" endY="59.0" startX="853.0" startY="59.0" stroke="LIME" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightLdaRedLine" endX="853.0" endY="59.0" startX="853.0" startY="59.0" stroke="RED" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightToraGreenLine" endX="853.0" endY="24.0" startX="853.0" startY="24.0" stroke="LIME" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightToraRedLine" endX="853.0" endY="24.0" startX="853.0" startY="24.0" stroke="RED" strokeWidth="3.0" visible="false" />
+                              <HBox fx:id="rightToraTextBox" alignment="CENTER_LEFT" layoutX="862.0" layoutY="16.0" prefHeight="19.0" prefWidth="204.0" visible="false">
+                                 <children>
+                                    <Text fx:id="rightToraExtra2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" wrappingWidth="77.60001182556152" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="rightToraExtra1" fill="LIME" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" wrappingWidth="79.59056091308594" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="rightToraText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" wrappingWidth="81.50256538391113" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="rightLdaTextBox" alignment="CENTER_LEFT" layoutX="862.0" layoutY="50.0" prefHeight="19.0" prefWidth="204.0" visible="false">
+                                 <children>
+                                    <Text fx:id="rightLdaExtra2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" wrappingWidth="77.60001182556152" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="rightLdaExtra1" fill="LIME" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" wrappingWidth="76.39060974121094" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="rightLdaText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIP-END" wrappingWidth="81.50256538391113" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Line fx:id="leftToraMarker1" endX="242.0" endY="308.9454345703125" startX="242.0" startY="290.0019226074219" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="leftToraMarker2" endX="242.0" endY="308.9454345703125" startX="242.0" startY="290.0019226074219" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightToraMarker1" endX="853.0" endY="34.0" startX="853.0" startY="16.0" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightToraMarker2" endX="853.0" endY="34.0" startX="853.0" startY="16.0" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightLdaMarker1" endX="853.0" endY="68.0" startX="853.0" startY="51.0" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightLdaMarker2" endX="853.0" endY="68.0" startX="853.0" startY="51.0" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="leftLdaMarker2" endX="242.0" endY="340.0" startX="242.0" startY="320.0" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="leftLdaMarker1" endX="242.0" endY="340.0" startX="242.0" startY="320.0" stroke="WHITE" strokeWidth="3.0" visible="false" />
+                              <Line fx:id="rightTodaStartLine" endX="853.0" endY="130.0" startX="853.0" startY="111.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightTodaEndLine" endX="42.08586120605469" endY="132.0" startX="42.08586120605469" startY="111.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightToraEndLine" endX="237.08587646484375" endY="33.0" startX="237.08587646484375" startY="15.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightToraStartLine" endX="853.0" endY="34.0" startX="853.0" startY="16.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightLdaStartLine" endX="853.0" endY="68.0" startX="853.0" startY="51.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightLdaEndLine" endX="237.08587646484375" endY="69.0" startX="237.08587646484375" startY="48.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightAsdaEndLine" endX="149.0858612060547" endY="98.0" startX="149.0858612060547" startY="80.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="rightAsdaStartLine" endX="853.0" endY="98.0" startX="853.0" startY="79.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftTodaEndLine" endX="1057.0" endY="405.0" startX="1057.0" startY="385.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftTodaStartLine" endX="242.0" endY="406.0" startX="242.0" startY="387.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftToraStartLine" endX="242.0" endY="308.9454345703125" startX="242.0" startY="290.0019226074219" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftToraEndLine" endX="860.0" endY="308.0" startX="860.0" startY="291.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftLdaEndLine" endX="860.0" endY="341.0" startX="860.0" startY="320.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftLdaStartLine" endX="242.0" endY="340.0" startX="242.0" startY="320.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftAsdaStartLine" endX="242.0" endY="372.0" startX="242.0" startY="352.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Line fx:id="leftAsdaEndLine" endX="944.0" endY="372.0" startX="944.0" startY="351.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Rectangle fx:id="todaRect1" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="819.0" x="241.0" y="384.0" />
+                              <Rectangle fx:id="asdaRect1" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="702.0" x="240.0" y="350.0" />
+                              <Rectangle fx:id="leftToraRect1" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="618.0" x="242.0" y="288.0" />
+                              <Rectangle fx:id="leftToraRect2" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="242.0" y="285.0" />
+                              <Rectangle fx:id="leftToraRect3" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="242.0" y="285.0" />
+                              <Rectangle fx:id="leftLdaRect1" arcHeight="5.0" arcWidth="5.0" height="24.0" layoutY="-1.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="618.0" x="242.0" y="321.0" />
+                              <Rectangle fx:id="leftLdaRect2" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="242.0" y="321.0" />
+                              <Rectangle fx:id="leftLdaRect3" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="242.0" y="321.0" />
+                              <Rectangle fx:id="rightLdaRect1" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="616.0" x="237.0" y="49.0" />
+                              <Rectangle fx:id="rightToraRect1" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="616.0" x="237.0" y="12.0" />
+                              <Rectangle fx:id="rightToraRect2" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="853.0" y="13.0" />
+                              <Rectangle fx:id="rightToraRect3" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="853.0" y="13.0" />
+                              <Rectangle fx:id="todaRect2" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="813.0" x="40.0" y="109.0" />
+                              <Rectangle fx:id="asdaRect2" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="702.0" x="150.0" y="77.0" />
+                              <Rectangle fx:id="rightLdaRect3" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="853.0" y="49.0" />
+                              <Rectangle fx:id="rightLdaRect2" arcHeight="5.0" arcWidth="5.0" height="24.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" x="853.0" y="49.0" />
+                              <Text fx:id="none1" fill="WHITE" layoutX="488.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No re-declaration" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="none2" fill="WHITE" layoutX="435.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obstacle outside of required area" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+            <BorderPane layoutX="1.0" layoutY="558.0" prefHeight="226.0" prefWidth="1200.0">
+               <center>
+                  <Pane prefHeight="214.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="50.0" right="50.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <TextArea fx:id="outputArea" editable="false" layoutX="159.0" layoutY="1.0" prefHeight="189.0" prefWidth="933.0" promptText="Add a logical runway to begin" translateY="7.5" />
+                        <VBox alignment="CENTER" layoutX="15.0" layoutY="5.0" maxHeight="195.0" prefWidth="140.0">
+                           <children>
+                              <RadioButton fx:id="showLogicalOne" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#runCalcs" selected="true" text="Runway 1" visible="false">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="calculation" />
+                                 </toggleGroup>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="showLogicalTwo" mnemonicParsing="false" onAction="#runCalcs" text="Runway 2" toggleGroup="$calculation" visible="false">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <VBox alignment="CENTER" prefHeight="113.0" prefWidth="138.0">
+                                 <children>
+                                    <Text fx:id="calculationHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="Add/Update obstacle!" textAlignment="CENTER" visible="false" wrappingWidth="139.17120051383972">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <ToggleButton fx:id="toggleCalculations" mnemonicParsing="false" onAction="#runCalcs" prefWidth="100.0" text="Redeclare" visible="false" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="100.0" prefWidth="1200.0">
+               <top>
+                  <ToolBar prefHeight="50.0" prefWidth="1235.0" BorderPane.alignment="CENTER">
+                    <items>
+                        <ComboBox fx:id="airportSelector" prefHeight="26.0" prefWidth="136.0" />
+                        <Button mnemonicParsing="false" onAction="#changeAirport" prefHeight="25.0" prefWidth="100.0" text="Select Airport" />
+                        <Button mnemonicParsing="false" onAction="#addAirport" text="New Airport" />
+                        <HBox maxHeight="-Infinity" prefHeight="29.0" prefWidth="165.0">
+                           <children>
+                              <RadioButton mnemonicParsing="false" onAction="#viewTop" prefHeight="29.0" prefWidth="82.0" selected="true" text="Top-Down">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="viewing" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" onAction="#viewSide" prefHeight="29.0" prefWidth="72.0" text="Side-On" toggleGroup="$viewing">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <Line endX="-95.36396789550781" endY="37.87868118286133" startX="-95.41421508789062" startY="10.585786819458008" stroke="#a4a4a4" />
+                           </children>
+                        </HBox>
+                        <RadioButton fx:id="viewOriginalCalcs" disable="true" mnemonicParsing="false" onAction="#viewWithObstacle" prefHeight="17.0" prefWidth="132.0" selected="true" text="View With Obstacle">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="topdown" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="viewCalculated" mnemonicParsing="false" onAction="#viewWithoutObstacle" prefHeight="18.0" prefWidth="144.0" selected="true" text="View Without Obstacle" toggleGroup="$topdown" />
+                        <ToggleButton fx:id="rotateButton" mnemonicParsing="false" onAction="#rotate" text="Rotate/Reset" />
+                        <Button fx:id="zoomInButton" mnemonicParsing="false" onAction="#zoomIn" text="Zoom In" />
+                        <Button fx:id="zoomOutButton" mnemonicParsing="false" onAction="#zoomOut" text="Zoom Out" />
+                        <Button fx:id="upButton" mnemonicParsing="false" onAction="#moveUp" text="Up" />
+                        <Button fx:id="downButton" mnemonicParsing="false" onAction="#moveDown" text="Down" />
+                        <Button fx:id="leftButton" mnemonicParsing="false" onAction="#moveLeft" text="Left" />
+                        <Button fx:id="rightButton" mnemonicParsing="false" onAction="#moveRight" text="Right" />
+                    </items>
+                  </ToolBar>
+               </top>
+               <bottom>
+                  <ToolBar prefHeight="50.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <ComboBox fx:id="physicalSelector" prefHeight="26.0" prefWidth="136.0" />
+                        <Button mnemonicParsing="false" onAction="#changePhysical" prefWidth="100.0" text="Select Runway" />
+                      <Button mnemonicParsing="false" onAction="#addPhysical" text="Add Physical Runway" />
+                        <Button mnemonicParsing="false" onAction="#openConfigRunway" text="Add Logical Runway" />
+                        <Button mnemonicParsing="false" onAction="#openConfigObs" text="Add/Overwrite Obstacle" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="13.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="82.0" />
+                        <Button mnemonicParsing="false" onAction="#openImportAirObs" text="Import Airports/Obstacles" />
+                        <Button mnemonicParsing="false" onAction="#openExport" text="Export Current Airports as XML" />
+                        <Button mnemonicParsing="false" onAction="#openHelp" text="Help" />
+                        <ImageView fx:id="compass" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@26237f5e7150227d97e6126229b61e78_arrow-north-compass-r.png" />
+                           </image>
+                        </ImageView>
+                     </items>
+                  </ToolBar>
+               </bottom>
+            </BorderPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
